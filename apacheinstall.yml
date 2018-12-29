@@ -6,5 +6,6 @@
      yum:
         pkg: httpd
         state: present
+        service: start
 
      
