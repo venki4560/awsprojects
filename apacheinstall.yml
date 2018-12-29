@@ -4,8 +4,10 @@
   tasks:
    - name: Install apache
      yum:
-        pkg: httpd
+        name: httpd
         state: present
-        service: start
+     service: 
+        name: httpd
+        state: started
 
      
