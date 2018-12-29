@@ -1,0 +1,9 @@
+---
+- host: all
+  tasks:
+   - name: Install apache
+     yum:
+        pkg: httpd
+        state: Present
+
+     
