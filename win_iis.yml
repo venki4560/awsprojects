@@ -2,6 +2,6 @@
 hosts: windows
 tasks:
 - name: install IIS
-    win_feature:
+  win_feature:
       name: Web-Serer
       state: present
