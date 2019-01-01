@@ -1,5 +1,5 @@
 ---
-hosts: windows
+hosts: all
 tasks:
 - name: install IIS
   win_feature:
