@@ -1,0 +1,9 @@
+---
+- name: Endure IIS is installed
+  win_feature:
+    name: web-server
+    state: present
+- name: Deploy default iisstart.htm file
+  template:
+    src: iisstart.j2
+    dest: c:\inetpub\wwwroot\iisstart.htm
