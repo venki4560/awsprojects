@@ -10,4 +10,4 @@
   - name: Deploy index file
     template:
       src: iisstart.j2
-      dest: c:\inetpub\wwwroot\issstart.html
+      dest: c:\inetpub\wwwroot\issstart.htm
