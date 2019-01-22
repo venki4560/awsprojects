@@ -1,0 +1,29 @@
+---
+- name: Create an EC2 instance
+  hosts: localhost
+  gather_facts: False
+  vars:
+    keypair: id_rsa
+    instance_type: t2.micro
+    image: ami-49f0762d
+    region: us-west-1
+  tasks:
+    - name: Launch instance
+      ec2:
+         key_name: "{{ keypair }}"
+         instance_type: "{{ instance_type }}"
+         image: "{{image}}"
+         wait: true
+         region: "{{region}}"
+         aws_access_key: AKIAIGJXF5VCU4LZIPLQ
+         aws_secret_key: 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
+      register: ec2
+    - name: Print all ec2 variables
+      debug: var=ec2
+    - name: Get theh Ip address
+      debug: var=ec2.instances[0].public_dns_name
+
+    - pause: minutes=1
+
+
+
